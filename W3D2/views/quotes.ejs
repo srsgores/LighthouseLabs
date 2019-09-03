@@ -1,0 +1,53 @@
+<% include ./partials/_head %>
+
+<div class="container">
+  <h1>Movie Quotes</h1>
+
+  <div class="accordion" id="quote-list">
+    <% for (const quote of quotes) { %>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#<%= quote.id %>"
+            aria-expanded="false" aria-controls="collapseTwo">
+            <%= quote.quote %> 
+          </button>
+        </h5>
+
+        <span>
+          <form method="get" action="/quotes/<%= quote.id %>"><input type="submit" class="btn btn-secondary btn-sm"
+              value="Edit"></form>
+          <form method="post" action="/quotes/<%= quote.id%>?_method=DELETE"><input type="submit" class="btn btn-secondary btn-sm"
+              value="Delete"></form>
+        </span>
+
+      </div>
+      <div id="<%= quote.id %>" class="collapse" aria-labelledby="headingTwo" data-parent="#quote-list">
+        <div class="card-body">
+          <h4>Comments</h4>
+
+          <ul class="list-group">
+            <% for (const comment of quote.comments) { %>
+            <li class="list-group-item">
+              <%= comment.comment %>
+              <span>
+                <form method="get" action="/comments/<%= comment.id%>/update"><input type="submit" class="btn btn-secondary btn-sm"
+                    value="Edit"></form>
+                <form method="post" action="/comments/<%= comment.id%>?_method=DELETE"><input type="submit" class="btn btn-secondary btn-sm"
+                    value="Delete"></form>
+              </span>
+            </li>
+            <% } %>
+          </ul>
+
+          <a href="/quotes/<%= quote.id %>/comments/new" class="btn btn-info">Add Comment</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <a href="/quotes/new" class="btn btn-primary">Add Quote</a>
+</div>
+</body>
+
+</html>

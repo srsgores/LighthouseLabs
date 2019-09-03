@@ -1,10 +1,18 @@
 function TakeABreak(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, ms);
+});
 
 const MakeDinnerPromise = async () => {
-    await TakeABreak(3000);
-    console.log("Made dinner!");
+    try {
+        await TakeABreak(3000);
+    }
+    catch(error) {
+
+    }
+    finally {
+        console.log("Made dinner!");
+    }
     return;
 }
 

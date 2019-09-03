@@ -15,16 +15,19 @@ const Refrigerator = {
 
 const Mix = (ingredients) => {
     var bowl = "";
-    ingredients.forEach((ingredient) => {
+    for(const ingredient of ingredients) {
+        if(Refrigerator[ingredient] === undefined){
+            return null
+        }
         if (Refrigerator[ingredient].Count > 0) {
             bowl += ingredient;
         }
-    });
+    };
     return bowl;
 }
 
 const MakeDinner = () => {
-    let dinner = Mix(["eggs", "milk", "bacon"]);
+    let dinner = Mix(["eggs", "milk", "cheese"]);
     return dinner;
 }
 
@@ -32,7 +35,7 @@ const MakeDinnerPromise = () => {
     return new Promise((resolve, reject) => {
         setTimeout( () => {
             if (MakeDinner()) {
-                resolve();
+                resolve("x");
             } 
             else {
                 reject(Error("Couldn't make dinner!"));
@@ -43,8 +46,8 @@ const MakeDinnerPromise = () => {
 
 console.log("Starting dinner!");
 MakeDinnerPromise()
-    .then(() => {
-        console.log("Made dinner!");
+    .then((x) => {
+        console.log("Made dinner!" + x);
     })
     .catch(() => {
         console.log("Ordering pizza!");

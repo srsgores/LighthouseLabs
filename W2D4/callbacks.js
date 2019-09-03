@@ -54,6 +54,7 @@ const CleanDishes = (callback) => {
 // GetGroceries ( () => {
 //     SetTable ( () => {
 //         MakeDinner( () => {
+            
 //             CleanDishes ( () => {
 //                 console.log("done");
 //                 })
@@ -98,11 +99,14 @@ const CleanDishesPromise = () => {
     });
 }
 
-// GetGroceriesPromise()
-//     .then(SetTablePromise)
-//     .then(MakeDinnerPromise)
-//     .then(CleanDishesPromise)
-//     .then(() => {console.log("done!")});
+GetGroceriesPromise()
+    .then(groceries => {
+        console.log(groceries);
+        return SetTablePromise();
+    })
+    .then(MakeDinnerPromise)
+    .then(CleanDishesPromise)
+    .then(() => {console.log("done!")});
 
 // Promise.all([GetGroceriesPromise(), SetTablePromise()])
 //     .then(MakeDinnerPromise)
