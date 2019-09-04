@@ -1,4 +1,4 @@
-# W7D3 - Lecture - CRUD with Express
+# W3D2 - Lecture - CRUD with Express
 
 ### What is Express?
 
@@ -50,8 +50,7 @@ We design the following end points for our quotes app:
 | Get a specific quote                  | GET       | get '/quotes/:id'        |
 | Display the new form                  | GET       | get '/quotes/new         |
 | Create a new quote                    | POST      | post '/quotes            |
-| Display the form for updating a quote | GET       | get '/quotes/:id/update' |
-| Update the quotes                     | PUT       | put '/quotes/:id         |
+| Update a quote                        | PUT       | put '/quotes/:id         |
 | Deleting a specific quote             | DELETE    | delete '/quotes:id'      |
 
 #### Nested Resources
