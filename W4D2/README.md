@@ -16,6 +16,8 @@ The browser object model (BOM) is a hierarchy of browser objects that are used t
 - location object
 - document object (DOM)
 
+[Diagram 1](https://camo.githubusercontent.com/f842a91bf6c0fa3a9afebf920e7294ebd2223689/68747470733a2f2f667a65726f2e6769746875622e696f2f6c686c2d6c656374757265732f6173736574732f62726f777365722d6170692e737667) [Diagram 2 from external source](https://image3.slideserve.com/6245083/browser-object-model-bom-l.jpg)
+
 #### Window Object
 
 - top-level object in the browser
@@ -58,6 +60,8 @@ window.history.forward();
 - The DOM is used to modify the content, structure or style of the document.
 
 - Use `console.dir(document)` in devtools to display the DOM in a document
+
+[Diagram from Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model#/media/File:DOM-model.svg)
 
 ## II. Manipulating the DOM
 
@@ -168,7 +172,7 @@ Events are a very important in building complex user interaction in your web app
 
 ## IV. JQuery
 
-jQuery is a fast, small, and feature-rich JavaScript library.
+jQuery is a fast, small, and feature-rich JavaScript library (not a framework! Remember?).
 
 It makes things much simpler:
 
@@ -180,10 +184,22 @@ It makes things much simpler:
 
 ### DOM Traversal with jQuery
 
-- [Add Demo]()
+- [Get button, its parent, and its sibling and console.log them](https://jsfiddle.net/b3kj719g/)
 
-### Create HTML Dynamically
+### DOM Manipulation with jQuery
 
-- Create HTML Dynamically with jQuery
+- [Change button colour on click](https://jsfiddle.net/76bdjLk3/1)
 
-- [Add Demo]()
+### Create HTML Dynamically with jQuery
+
+- [Add pets HTML based on JS object](https://jsfiddle.net/81aer6oz/)
+
+## V. Notes
+
+Sometimes it's nice to use an online tool to play around with HTML, JS, and CSS at the same time. Here are some we mentioned and/or worked with today:
+
+- [Javascript Tutor](http://pythontutor.com/javascript.html#mode=edit)
+- [REPL](https://repl.it)
+- [Plunkr](http://next.plnkr.co/)
+- [jsFiddle](https://jsfiddle.net/)
+- [CodePen](https://codepen.io/pen/)
