@@ -1,0 +1,66 @@
+$primary-color: #ff3472;
+
+@mixin myParagraph($background-color) {
+  font-size: 2.9em;
+  background-color: $background-color;
+  width: 6em;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+  min-width: 300px;
+  min-height: 400px;
+}
+
+h1{
+  background-color: $primary-color;
+  color: #fff;
+  display: inline-block;
+  width: 40%;
+}
+h2 {
+  @extend h1;
+  font-size: 15px;
+}
+
+div.myDiv {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: pink;
+  width: 90vw;
+  height: 40vh;
+  font-size: 15px;
+  
+  &:hover {
+    background-color: $primary-color;
+  }
+
+  p {
+    color: #000;
+    
+    &.normal {
+      @include myParagraph(#003300);
+      color: #fff;
+    }
+    
+    &.blue {
+      @include myParagraph(blue);
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    background-color: lightblue;
+    display: block;
+    width: 100%;
+  }
+  h2 {
+    display: block;
+    width: 100%;
+  }
+  div.myDiv {
+    flex-direction: column;
+  }
+}

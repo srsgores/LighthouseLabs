@@ -1,0 +1,50 @@
+body {
+    font-size: 10px;
+  }
+  
+  img {
+    width: 30%;
+    height: 30%;
+    min-width: 300px;
+    min-height: 400px;
+  }
+  
+  h1{
+    background-color: blue;
+    color: #fff;
+    display: inline-block;
+    width: 40%;
+  }
+  h2 {
+    display: inline-block;
+    width: 40%;
+  }
+  div.myDiv {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: pink;
+    width: 90vw;
+    height: 40vh;
+    font-size: 15px;
+  }
+  
+  div.myDiv p {
+    font-size: 0.9rem;
+    background-color: red;
+    width: 6rem;
+  }
+  
+  @media screen and (max-width: 450px) {
+    h1 {
+      background-color: lightblue;
+      display: block;
+      width: 100%;
+    }
+    h2 {
+      display: block;
+      width: 100%;
+    }
+    div.myDiv {
+      flex-direction: column;
+    }
+  }
