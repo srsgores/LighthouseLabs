@@ -1,4 +1,4 @@
-# lhl-w3d5 - Responsive design + Sass
+# W4D4 - Responsive Design + Sass
 
 ## Responsive Design
 
