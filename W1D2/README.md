@@ -6,17 +6,44 @@ Slides! : https://docs.google.com/presentation/d/1m3R_aN4S5YoCBmXRbjaZQGatygWyZX
 
 ## How to approach a problem
 
+- defined the problem (thought about SCOPE)
+- break the problem into smaller problems
+- conquered each problem and tested along the way
+- it's ok if it isn't perfect, we can refactor!
+
 ## Live coding
 
+- create a README
+- you all contribute to the solution
+
 ### What you should do while I write code
+
+- participated
+- listened
+- DID NOT code along beside me
 
 ### Demo with process.argv
 
 ### Why are you coding this?
 
+- 
+
 ### Halp it's broken
 
+- stay calm
+- errors are your friend
+- 15 minute rule
+- don't say IT'S NOT WERKING
+
 ### How to search, aka how to word a problem
+
+- real language questions
+- it's nice to add the language you're using, the environment, etc.
+- StackOverflow is your best friend
+- Documentation is also your best friend (you have lot's of best friends)
+  - MDN
+  - Node
+  
 
 ## Git workflow
 
