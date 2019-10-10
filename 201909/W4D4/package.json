@@ -1,0 +1,19 @@
+{
+  "name": "w4d4-lecture_css_sass_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "nodemon server.js"
+  },
+  "author": "Ashley McMillan-ish",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node-sass-middleware": "^0.11.0",
+    "path": "^0.12.7",
+    "sass-middleware": "0.0.3"
+  }
+}
