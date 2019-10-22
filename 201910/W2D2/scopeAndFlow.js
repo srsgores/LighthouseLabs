@@ -21,11 +21,11 @@ console.log('AFTER CALL');
 
 
 // const higherOrderFunc = function(callback) {
-//     const data = { initials: "YV" };
+//     const data = { name: "Bond" };
   
 //     console.log('BEFORE TIMEOUT CALL');
 //     setTimeout(() => {
-//       data.initials = "YAV";
+//       data.name = "James Bond";
 //       callback();
 //       // as per question 3, what if we return data below? Like so:
 //       // return data;
