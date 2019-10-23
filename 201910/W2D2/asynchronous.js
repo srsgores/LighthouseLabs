@@ -1,6 +1,3 @@
-// Assume that it takes 3000ms (3 seconds) to prepare one
-// item of food
-
 const prepareFood = function(food, quantity, cookingTime) {
 
     // syntax for setTimeout

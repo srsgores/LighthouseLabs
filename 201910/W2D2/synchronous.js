@@ -6,10 +6,10 @@ const prepareFood = function(food, quantity) {
     console.log(`Serving ${quantity} orders of ${food}.`);
 };
 
-// console.log('Welcome to Lighthouse Cafe!');
+console.log('Welcome to Lighthouse Cafe!');
 
-// console.log('Two pancakes, please.')
-// prepareFood('pancakes', 100000);
+console.log('Two pancakes, please.')
+prepareFood('pancakes', 100000);
 
-// console.log('Can I get a soup?');
-// prepareFood('soup', 1);
+console.log('Can I get a soup?');
+prepareFood('soup', 1);

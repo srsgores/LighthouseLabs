@@ -12,5 +12,7 @@ stdin.on('data', function(key) {
         process.exit();
     }
 
-    stdout.write(`${key}\n`);
+    stdout.write(`HEY ${key}\n`);
 });
+
+console.log("It's over.");
