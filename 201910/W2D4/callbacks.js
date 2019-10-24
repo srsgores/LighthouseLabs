@@ -1,39 +1,32 @@
-const MakeDinner = (callback) => {
+let GetGroceries = (_callback) => {
+    setTimeout(() => {
+        console.log("Get groceries!");
+        _callback();
+    }, 2000)
+}
+
+let SetTable = (_callback) => {
+    setTimeout(() => {
+        console.log("Set table!");
+        _callback();
+    }, 1000)
+}
+
+let MakeDinner = (_callback) => {
     setTimeout(() => {
         console.log("Made dinner!");
-        callback();
-    }, 3000);
+        _callback();
+    }, 3000)
 }
 
-const GetGroceries = (callback) => {
+let CleanDishes = () => {
     setTimeout(() => {
-        console.log("Got groceries!");
-        callback();
-    }, 2000);
+        console.log("Cleaned dishes!");
+    }, 1000)
 }
 
-const SetTable = (callback) => {
-    setTimeout(() => {
-        console.log("Set the table!");
-        callback();
-    }, 2000);
-}
-
-const CleanDishes = (callback) => {
-    setTimeout(() => {
-        console.log("Did the dishes!");
-        callback();
-    }, 2000);
-}
-
-// GetGroceries ( () => {
-//     SetTable ( () => {
-//         MakeDinner( () => {
-            
-//             CleanDishes ( () => {
-//                 console.log("done");
-//                 })
-//             })
-//         }
-//     )
-// });
+GetGroceries(() => {
+    SetTable(() => {
+        MakeDinner(CleanDishes)
+    })
+});

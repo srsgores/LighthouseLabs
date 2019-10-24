@@ -4,7 +4,7 @@ const Refrigerator = {
         Count: 5
     },
     milk: {
-        Colour: "orange",
+        Colour: "white",
         Count: 1
     },
     cheese: {
@@ -16,15 +16,72 @@ const Refrigerator = {
 const Mix = (ingredients) => {
     let bowl = 0;
     for (let ingredient of ingredients) {
-        bowl += Refrigerator[ingredient];
+        if (ingredient == "milk" && Refrigerator[ingredient].Colour != "white") {
+            throw new Error("That's gross.");
+        }
+        bowl += Refrigerator[ingredient].Count;
     }
 
     return bowl;
 }
 
 const MakeDinner = () => {
-    let dinner = Mix(["eggs", "milk", "bacon"]);
-    console.log(dinner);
+    let dinner = Mix(["eggs", "milk", "cheese"]);
+    return dinner;
 }
 
-MakeDinner();
+const MakeDinnerPromise = () => {
+    return new Promise((resolve, reject) => {
+        
+            let dinner = Mix(["eggs", "milk", "cheese"]);
+            resolve(dinner);
+        
+    })
+}
+
+try {
+    console.log("Making dinner!");
+    //throw new Error();
+    console.log(MakeDinner());
+}
+catch (error) {
+    console.log(error);
+    console.log("Order a pizza!");
+    //throw new Error();
+}
+finally {
+    console.log("Dinner's ready!");
+    
+    
+}
+
+let promise = MakeDinnerPromise();
+promise
+    .then((x) => {console.log(x);})
+    .catch((error) => {console.log(error.name);})
+    .finally(() => {
+        console.log("FINALLY");
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//throw new Error(`Ain't got no ${ingredient}`);
